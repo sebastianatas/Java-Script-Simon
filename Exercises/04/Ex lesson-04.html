@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ex 04 Buttons</title>
+        <style>
+            .cart {
+                background-color: yellow;
+            }
+
+            .buy {
+                background-color: orange;
+            }
+
+            .shopping-card {
+                margin-top: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <button>Click</button> <br />
+        <button>Sebastian</button>
+        <button>Pizza</button>
+        <p>Hello, world</p>
+        <p>I just had my exercises and cold shower</p>
+
+        <div class="shopping-card">
+            <p>Adults Plain Cotton T-shirt</p>
+            <p>Price: $7.99</p>
+            <button
+                class="cart"
+                onclick="
+            alert('Added')
+            "
+            >
+                Add to cart
+            </button>
+            <button
+                class="buy"
+                onclick="console.log('Loading...'); alert('Purchased')"
+            >
+                Buy now
+            </button>
+        </div>
+
+        <script>
+            console.log("Welcome");
+        </script>
+    </body>
+</html>
