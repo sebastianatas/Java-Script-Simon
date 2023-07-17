@@ -12,39 +12,47 @@
         </button>
         <button
             onclick="
-            cartQuantity ++;
-            console.log(`Cart quantity: ${cartQuantity}`)"
+            cartQuantity < 10 
+                ? cartQuantity++ && console.log(`Cart quantity: ${cartQuantity}`) 
+                : alert('Cart is full. Maximum 10 items allowed');
+            "
         >
             Add to Cart
         </button>
         <button
             onclick="
-                cartQuantity += 2;
-                console.log(`Cart quantity: ${cartQuantity}`)"
+                cartQuantity < 9
+                ? (cartQuantity += 2) && console.log(`Cart quantity: ${cartQuantity}`) 
+                : alert('Cart is full. Maximum 10 items allowed');
+                "
         >
             +2
         </button>
         <button
             onclick="
-                cartQuantity += 3;
-                console.log(`Cart quantity: ${cartQuantity}`)"
+                cartQuantity < 8 
+                ? (cartQuantity += 3) && console.log(`Cart quantity: ${cartQuantity}`) 
+                : alert('Cart is full. Maximum 10 items allowed');
+                "
         >
             +3
         </button>
 
         <button
             onclick="
-                cartQuantity +=4;
-                console.log(`Cart quantity: ${cartQuantity}`);
-            "
+                cartQuantity < 7 
+                ? (cartQuantity += 4) && console.log(`Cart quantity: ${cartQuantity}`) 
+                : alert('Cart is full. Maximum 10 items allowed');
+                "
         >
             +4
         </button>
 
         <button
             onclick="
-                cartQuantity += 5;
-                console.log(`Cart quantity: ${cartQuantity}`);
+                cartQuantity < 6 
+                ? (cartQuantity += 5) && console.log(`Cart quantity: ${cartQuantity}`) 
+                : alert('Cart is full. Maximum 10 items allowed');
             "
         >
             +5
@@ -52,8 +60,10 @@
 
         <button
             onclick="
-                cartQuantity --;
-                console.log(`Cart quantity: ${cartQuantity}`);
+                cartQuantity >= 1 
+                ? (cartQuantity--) && console.log(`Cart quantity: ${cartQuantity}`)
+                : alert('Not enough items in the cart');
+            
                 "
         >
             Remove from cart
@@ -61,8 +71,10 @@
 
         <button
             onclick="
-                cartQuantity -= 2;
-                console.log(`Cart quantity: ${cartQuantity}`)
+                cartQuantity >= 2 
+                ? (cartQuantity -= 2, console.log(`Cart quantity: ${cartQuantity}`))
+                : alert('Not enough items in the cart');
+            
                 "
         >
             -2
@@ -70,8 +82,10 @@
 
         <button
             onclick="
-                cartQuantity -= 3;
-                console.log(`Cart quantity: ${cartQuantity}`)
+                cartQuantity >= 3 
+                ? (cartQuantity -= 3, console.log(`Cart quantity: ${cartQuantity}`))
+                : alert('Not enough items in the cart');
+                
             "
         >
             -3
