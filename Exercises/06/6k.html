@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>6K</title>
+    </head>
+    <body>
+        <p>Cart Quantity</p>
+
+        <button
+            onclick="
+                (10 - cartQuantity) === 1 ? console.log (`Your cart has ${cartQuantity} items. You can add ${10 - cartQuantity} more item.`)
+                : console.log (`Your cart has ${cartQuantity} items. You can add ${10 - cartQuantity} more items.`)
+                
+    "
+        >
+            Show Quantity
+        </button>
+
+        <button
+            onclick="
+            10 > cartQuantity ? cartQuantity++ : console.log('Cart is full. Maximum 10 items allowed');
+            console.log(cartQuantity)
+        "
+        >
+            Add to Cart
+        </button>
+
+        <button
+            onclick="
+                8 >= cartQuantity  ? cartQuantity += 2 
+                : cartQuantity === 9 ? console.log(`Your cart has ${cartQuantity} items. You can add only ${10 - cartQuantity} more.`)
+                : console.log('Cart is full. Maximum 10 items allowed');
+
+                console.log(cartQuantity)
+            
+        
+                "
+        >
+            +2
+        </button>
+
+        <button
+            onclick="
+                7 >= cartQuantity ? cartQuantity += 3
+                    : cartQuantity === 8 || cartQuantity === 9 ? console.log(`Your cart has ${cartQuantity} items. You can add only ${10 - cartQuantity} more.`)
+                    : console.log('Cart is full. Maximum 10 allowed');
+
+                    console.log(cartQuantity)
+                
+            "
+        >
+            +3
+        </button>
+
+        <button
+            onclick="
+                6 >= cartQuantity ? cartQuantity += 4
+                : cartQuantity === 9 || cartQuantity === 8 || cartQuantity === 7 ? console.log(`Your cart has ${cartQuantity} items. You can add only ${10 - cartQuantity} more.`)
+                : console.log ('Cart is full. Maximum 10 items allowed');
+
+                console.log(cartQuantity)
+        "
+        >
+            +4
+        </button>
+
+        <button
+            onclick="
+                5 >= cartQuantity ? cartQuantity += 5
+                : cartQuantity === 9 || cartQuantity === 8 || cartQuantity === 7 || cartQuantity === 6 ? console.log(`Your cart has ${cartQuantity} items. You can add only ${10 - cartQuantity} more.`)
+                : console.log('Cart is full. Maximum 10 items allowed');
+
+                console.log(cartQuantity)
+        "
+        >
+            +5
+        </button>
+
+        <button
+            onclick="
+                    1 <= cartQuantity ? cartQuantity-- : console.log('Cart is empty.');
+            console.log(cartQuantity)
+
+                "
+        >
+            Remove from cart
+        </button>
+
+        <button
+            onclick="
+                2 <= cartQuantity ? cartQuantity -= 2 : cartQuantity === 1 ? console.log(`Your cart has ${cartQuantity} item. You can remove only ${cartQuantity} more.`) :
+                console.log('Cart is empty.');
+
+                console.log(cartQuantity)
+        "
+        >
+            -2
+        </button>
+
+        <button
+            onclick="
+                3 <= cartQuantity ? cartQuantity -= 3 : cartQuantity === 2 ? console.log(`Your cart has ${cartQuantity} items. You can remove only ${cartQuantity} more.`) : cartQuantity === 1 ? console.log(`Your cart has ${cartQuantity} item. You can remove only ${cartQuantity} more.`) :
+                console.log('Cart is empty.');
+
+                console.log(cartQuantity)
+        "
+        >
+            -3
+        </button>
+
+        <button
+            onclick="
+            cartQuantity = 0;
+            console.log('Cart was reset!')
+            console.log(cartQuantity)
+        "
+        >
+            Reset cart
+        </button>
+
+        <script>
+            let cartQuantity = 0;
+        </script>
+    </body>
+</html>
