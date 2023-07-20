@@ -10,8 +10,8 @@
 
         <button
             onclick="
-                (10 - cartQuantity) === 1 ? console.log (`Your cart has ${cartQuantity} items. You can add ${10 - cartQuantity} more item.`)
-                : console.log (`Your cart has ${cartQuantity} items. You can add ${10 - cartQuantity} more items.`)
+                cartQuantity === 1 ? alert (`Your cart has ${cartQuantity} item. You can add ${10 - cartQuantity} more items.`) 
+                : alert (`Your cart has ${cartQuantity} items. You can add ${10 - cartQuantity} more item.`)
                 
     "
         >
@@ -20,8 +20,8 @@
 
         <button
             onclick="
-            10 > cartQuantity ? cartQuantity++ : console.log('Cart is full. Maximum 10 items allowed');
-            console.log(cartQuantity)
+            9 >= cartQuantity || cartQuantity === 0  ? (cartQuantity++, console.log(cartQuantity)): alert('Cart is full. Maximum 10 items allowed') ;
+        
         "
         >
             Add to Cart
@@ -29,11 +29,11 @@
 
         <button
             onclick="
-                8 >= cartQuantity  ? cartQuantity += 2 
-                : cartQuantity === 9 ? console.log(`Your cart has ${cartQuantity} items. You can add only ${10 - cartQuantity} more.`)
-                : console.log('Cart is full. Maximum 10 items allowed');
+                8 >= cartQuantity  ? (cartQuantity += 2) && console.log(cartQuantity) 
+                : cartQuantity === 9 ? alert(`Your cart has ${cartQuantity} items. You can add only ${10 - cartQuantity} more.`)
+                : alert('Cart is full. Maximum 10 items allowed');
 
-                console.log(cartQuantity)
+                
             
         
                 "
@@ -43,11 +43,11 @@
 
         <button
             onclick="
-                7 >= cartQuantity ? cartQuantity += 3
-                    : cartQuantity === 8 || cartQuantity === 9 ? console.log(`Your cart has ${cartQuantity} items. You can add only ${10 - cartQuantity} more.`)
-                    : console.log('Cart is full. Maximum 10 allowed');
+                7 >= cartQuantity ? (cartQuantity += 3) && console.log(cartQuantity)
+                    : cartQuantity === 8 || cartQuantity === 9 ? alert(`Your cart has ${cartQuantity} items. You can add only ${10 - cartQuantity} more.`)
+                    : alert('Cart is full. Maximum 10 allowed');
 
-                    console.log(cartQuantity)
+                    
                 
             "
         >
@@ -56,11 +56,11 @@
 
         <button
             onclick="
-                6 >= cartQuantity ? cartQuantity += 4
-                : cartQuantity === 9 || cartQuantity === 8 || cartQuantity === 7 ? console.log(`Your cart has ${cartQuantity} items. You can add only ${10 - cartQuantity} more.`)
-                : console.log ('Cart is full. Maximum 10 items allowed');
+                6 >= cartQuantity ? (cartQuantity += 4) && console.log(cartQuantity)
+                : cartQuantity === 9 || cartQuantity === 8 || cartQuantity === 7 ? alert(`Your cart has ${cartQuantity} items. You can add only ${10 - cartQuantity} more.`)
+                : alert ('Cart is full. Maximum 10 items allowed');
 
-                console.log(cartQuantity)
+                
         "
         >
             +4
@@ -68,11 +68,11 @@
 
         <button
             onclick="
-                5 >= cartQuantity ? cartQuantity += 5
-                : cartQuantity === 9 || cartQuantity === 8 || cartQuantity === 7 || cartQuantity === 6 ? console.log(`Your cart has ${cartQuantity} items. You can add only ${10 - cartQuantity} more.`)
-                : console.log('Cart is full. Maximum 10 items allowed');
+                5 >= cartQuantity ? (cartQuantity += 5) && console.log(cartQuantity)
+                : cartQuantity === 9 || cartQuantity === 8 || cartQuantity === 7 || cartQuantity === 6 ? alert(`Your cart has ${cartQuantity} items. You can add only ${10 - cartQuantity} more.`)
+                : alert('Cart is full. Maximum 10 items allowed');
 
-                console.log(cartQuantity)
+                
         "
         >
             +5
@@ -80,8 +80,8 @@
 
         <button
             onclick="
-                    1 <= cartQuantity ? cartQuantity-- : console.log('Cart is empty.');
-            console.log(cartQuantity)
+                    1 <= cartQuantity ? (cartQuantity--) && console.log(cartQuantity) : alert('Cart is empty.');
+           
 
                 "
         >
@@ -101,8 +101,8 @@
 
         <button
             onclick="
-                3 <= cartQuantity ? cartQuantity -= 3 : cartQuantity === 2 ? console.log(`Your cart has ${cartQuantity} items. You can remove only ${cartQuantity} more.`) : cartQuantity === 1 ? console.log(`Your cart has ${cartQuantity} item. You can remove only ${cartQuantity} more.`) :
-                console.log('Cart is empty.');
+                3 <= cartQuantity ? cartQuantity -= 3 : cartQuantity === 2 ? alert(`Your cart has ${cartQuantity} items. You can remove only ${cartQuantity} more.`) : cartQuantity === 1 ? alert(`Your cart has ${cartQuantity} item. You can remove only ${cartQuantity} more.`) :
+                alert('Cart is empty.');
 
                 console.log(cartQuantity)
         "
