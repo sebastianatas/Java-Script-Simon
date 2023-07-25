@@ -6,14 +6,6 @@
         <title>7C</title>
     </head>
     <body>
-        <button
-            onclick="
-      greet ('');
-    "
-        >
-            Greet!
-        </button>
-
         <script>
             function greet(name) {
                 if (!name) {
@@ -22,6 +14,9 @@
                     console.log(`Hello ${name}!`);
                 }
             }
+
+            greet();
+            greet("Sebastian");
         </script>
     </body>
 </html>
