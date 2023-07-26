@@ -3,17 +3,20 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>5E</title>
+        <title>5G</title>
     </head>
     <body>
         <script>
             const coffee = 5;
-            const bagels = 3;
+            const bagel = 3;
             const soup = 9;
-            const cost = coffee + 2 * bagels + soup;
+            const cost = coffee + 2 * bagel + soup;
             const tax = cost * 0.1;
+            const totalCost = cost + tax;
 
             console.log(`Cost of food: $${cost}`);
+            console.log(`Tax (10%): $${tax}`);
+            console.log(`Total cost: $${totalCost}`);
         </script>
     </body>
 </html>
