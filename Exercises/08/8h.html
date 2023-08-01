@@ -99,30 +99,31 @@
         <p>
             <button
                 onclick="
-              updateCalculation('0')
-              "
+                updateCalculation('0')
+                "
             >
                 0
             </button>
             <button
                 onclick="
-              updateCalculation('.')
-              "
+                updateCalculation('.')
+                "
             >
                 .
             </button>
             <button
                 onclick="
                 console.log(eval(calculation));
-              
+								localStorage.setItem('calculation', calculation);
+                
             "
             >
                 =
             </button>
             <button
                 onclick="
-              updateCalculation(' / ')
-              "
+                updateCalculation(' / ')
+                "
             >
                 /
             </button>
@@ -131,23 +132,21 @@
         <button
             onclick="
             
-          console.log(calculation = 'Cleared!')
-          calculation = '';
-          "
+            console.log(calculation = 'Cleared!')
+            calculation = '';
+						localStorage.setItem('calculation', calculation);
+        "
         >
             Reset
         </button>
 
         <script>
-            let calculation = "";
-            console.log(calculation);
-            localStorage.getItem(calculation);
+            let calculation = localStorage.getItem("calculation") || "";
 
-            localStorage.setItem("calculation", calculation);
-
-            function updateCalculation(char) {
-                calculation += char;
+            function updateCalculation(value) {
+                calculation += value;
                 console.log(calculation);
+                localStorage.setItem("calculation", calculation);
             }
         </script>
     </body>
