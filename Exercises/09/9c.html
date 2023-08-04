@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>9C</title>
+    </head>
+    <body>
+        <button
+            onclick="
+          display('Heads');"
+        >
+            heads
+        </button>
+        <button
+            onclick="
+        display('Tails')"
+        >
+            tails
+        </button>
+        <p></p>
+        <script>
+            function display(input) {
+                document.querySelector("p").innerHTML = `You chose: ${input}`;
+            }
+        </script>
+    </body>
+</html>

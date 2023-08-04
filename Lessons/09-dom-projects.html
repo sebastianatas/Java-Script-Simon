@@ -15,7 +15,59 @@
         >
             Subscribe
         </button>
+
+        <p>Amazon Shipping Calculator</p>
+        <p>Orders under $40 = +$10 shipping.</p>
+        <p>Orders over $40 = FREE shipping.</p>
+        <!-- INPUT elements have no HTML. They have Values -->
+        <input
+            placeholder="Cost of order"
+            class="js-cost-input"
+            onkeydown="handleCostKeydown(event)
+        "
+        />
+
+        <!-- clicks, keydowns = EVENTS -->
+        <!-- onclick, onkeydown = EVENT LISTENERS -->
+
+        <button
+            onclick="
+                calculateTotal()
+            "
+        >
+            Calculate
+        </button>
+
+        <p class="js-total-cost"></p>
+
         <script>
+            String(24); // converts to string
+            console.log("25" - 5); // will = to 20
+            console.log("25" + 5); // will = to 255
+            // ALWAYS CONVERT TO NUMBERS TO DO MATH
+
+            window //represents the whole BROWSER
+            window.document //represents the WEBPAGE
+            window.console.log('window') // same as console.log()
+            window.alert // same as alert
+            // JS always adds window automatically
+
+            function handleCostKeydown(event) {
+                if (event.key === "Enter") {
+                    calculateTotal();
+                }
+            }
+            function calculateTotal() {
+                const inputElement = document.querySelector(".js-cost-input");
+                // using .value You get the text inside inputs
+                let cost = Number(inputElement.value);
+                //Number() is a function that converts to number
+                if (cost < 40) {
+                    cost += 10;
+                }
+                document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
+            }
+
             function subscribe() {
                 const buttonElement = document.querySelector(
                     ".js-subscribe-button"
