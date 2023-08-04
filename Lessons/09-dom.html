@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM</title>
+    </head>
+    <body>
+        <button>hello</button>
+        <button class="js-button">second</button>
+
+        <script>
+            /* 
+              document.body.innerHTML = 'Hello';
+              deletes everything on the page and replaces it with 'Hello' 
+            */
+
+            /* 
+              document - object
+              body - object inside object
+              innerHTML - property 
+            */
+
+            /* 
+              document.title = 'Good Job'
+              changes page's title 
+            */
+
+            /* 
+              The document object represents / models the webpage
+            Document Object Model (DOM) 
+            */
+
+            // PROPERTIES AND METHODS
+
+            /* 
+              document.title = "Changed";
+              console.log(document.title); 
+            */
+
+            /* 
+              console.log(document.body); //refers to the body element of the HTML
+              The DOM combines JS and HTML together and gives control 
+            */
+
+            /*
+              console.log(typeof document.body); 
+              body is now a JS object
+            */
+
+            /* 
+              document.body.innerHTML;
+              innerHTML controls all the HTML inside body and can change it! 
+
+              document.body.innerHTML = "Changed";
+
+              document.body.innerHTML =
+                "<button>Na belea ca bag chestii noi prin JS</button>"; */
+
+            /* 
+              document.querySelector()
+              lets us get ANY element from the page and put it in JS 
+            */
+
+            /*
+              document.querySelector("button"); selecteaza primul buton din pagina
+              console.log(document.querySelector("button"));
+            */
+
+            /*
+              every HTML element has a property .innerHTML
+              console.log(document.querySelector("button").innerHTML);
+              document.querySelector("button").innerHTML = "Schimb in ce vreau eu!";
+            */
+
+            
+
+            // document.querySelector(".js-button");
+            const buttonElement = document.querySelector('.js-button');
+            console.log(buttonElement);
+        </script>
+    </body>
+</html>

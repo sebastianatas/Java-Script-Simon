@@ -113,36 +113,41 @@
                 message: "Buna treaba",
             };
 
-            console.log(object3 === object1);
+            console.log(object3 === object1); //false
 
-            const object4 = {  //object
+
+            // DESTRUCTURING
+            const object4 = {
+                //object
                 message: "Buna treaba", //this is a property
                 price: 799, //this is a property
             };
 
-            // DESTRUCTURING
             // const message = object4.message;
-            const { message, price } = object4; //destructuring / faci variabile pt proprietati
+            const { message, price } = object4; //faci variabile pt proprietati
             console.log(message);
             console.log(price);
 
             //Shorthand property
+
+            //if variable name is same as the property, use this
             const object5 = {
                 // message: message,
                 message, //same as above
-            
+
                 /* method: function function1(){
                     console.log('method')
                 } */
 
                 //Shorthand method
-                method(){ //same as above
-                    console.log('method')
-                }
+                method() {
+                    //same as above
+                    console.log("method");
+                },
             };
 
             console.log(object5);
-            object5.method()
+            object5.method();
         </script>
     </body>
 </html>
