@@ -3,20 +3,20 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>9E</title>
     </head>
     <body>
         <input
             type="text"
             class="js-input"
             onkeydown="
-          handleKeyDown();
+                handleKeyDown();
         "
         />
         <button
             onclick="
-          display()
-          "
+                display()
+            "
         >
             Submit
         </button>
@@ -32,10 +32,10 @@
 
             function display() {
                 const elementInput = document.querySelector(".js-input");
-                const input = elementInput.value;
+                // const input = elementInput.value;
                 document.querySelector(
                     "p"
-                ).innerHTML = `Your name is: ${input}`;
+                ).innerHTML = `Your name is: ${elementInput.value}`;
             }
         </script>
     </body>
