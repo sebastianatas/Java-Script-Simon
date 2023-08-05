@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>9G</title>
+    </head>
+    <body>
+        <input
+            placeholder="Enter amount"
+            class="js-input"
+            onkeydown="pressingEnter()"
+        />
+        <button onclick="calculation()">Calculate</button>
+        <p></p>
+        <script>
+            const inputElement = document.querySelector(".js-input");
+
+            function calculation() {
+                let cost = Number(inputElement.value);
+                if (cost < 40) {
+                    cost += 10;
+                }
+                document.querySelector(
+                    "p"
+                ).innerHTML = `Total cost: $${cost.toFixed(2)}.`;
+                //.toFixed (method that FIXES the number of decimal points to (2))
+            }
+
+            function pressingEnter() {
+                if (event.key === "Enter") {
+                    calculation();
+                }
+            }
+        </script>
+    </body>
+</html>
