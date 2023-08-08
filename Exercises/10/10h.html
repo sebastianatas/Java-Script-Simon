@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>10H</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .cost-input {
+                font-size: 15px;
+                padding: 10px;
+            }
+
+            .calculate-button {
+                background-color: green;
+                padding: 12px 15px;
+                font-size: 15px;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+
+            .red-error-message {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Amazon Shipping Calculator</p>
+
+        <input
+            placeholder="Cost of order"
+            class="js-cost-input cost-input"
+            onkeydown="handleCostKeydown(event)
+        "
+        />
+
+        <button
+            class="calculate-button"
+            onclick="
+                calculateTotal()
+            "
+        >
+            Calculate
+        </button>
+
+        <p class="js-total-cost"></p>
+
+        <script>
+            function handleCostKeydown(event) {
+                if (event.key === "Enter") {
+                    calculateTotal();
+                }
+            }
+            function calculateTotal() {
+                const inputElement = document.querySelector(".js-cost-input");
+                let cost = Number(inputElement.value);
+                let paragraph = document.querySelector(".js-total-cost");
+
+                if (cost < 0) {
+                    paragraph.classList.add("red-error-message");
+                    document.querySelector(
+                        ".js-total-cost"
+                    ).innerHTML = `Error: cost cannot be less than $0`;
+                } else if (cost < 40 && cost > 1) {
+                    cost += 10;
+                    paragraph.classList.remove("red-error-message");
+                    document.querySelector(
+                        ".js-total-cost"
+                    ).innerHTML = `$${cost}`;
+                } else {
+                    document.querySelector(
+                        ".js-total-cost"
+                    ).innerHTML = `$${cost}`;
+                }
+            }
+        </script>
+    </body>
+</html>
