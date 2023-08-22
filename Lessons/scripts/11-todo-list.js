@@ -1,8 +1,8 @@
 /*1. create array to store todos
-  2. When we click "Add".
-  3. Get text from textbox
-  4. Add it to the array
-  5. console.log() the array */
+    2. When we click "Add".
+    3. Get text from textbox
+    4. Add it to the array
+    5. console.log() the array */
 
 const todoList = ["test", "math", "15 Oct"]; // Step 1
 
