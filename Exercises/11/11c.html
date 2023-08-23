@@ -8,11 +8,18 @@
     <body>
         <script>
             function arraySwap(array) {
-                array[0] = array[array.length - 1];
-                array[array.length - 1] = array[0];
+                const lastIndex = array.length - 1;
+
+                const firstValue = array[0];
+                const lastValue = array[lastIndex];
+
+                array[0] = lastValue;
+                array[lastIndex] = firstValue;
+
+                return array;
             }
 
-            console.log(arraySwap(["test", 10, 20]));
+            console.log(arraySwap([10, 15, 20, 50]));
         </script>
     </body>
 </html>
